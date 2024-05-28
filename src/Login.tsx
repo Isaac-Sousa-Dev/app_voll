@@ -5,7 +5,7 @@ import {Botao} from './components/Botao';
 import {EntradaDeTexto} from './components/EntradaDeTexto'
 import { Titulo } from './components/Titulo';
 
-export default function Login() {
+export default function Login({navigation}) {
   return (
     <VStack flex={1} justifyContent="center" alignItems="center" padding={5} >
       <Image source={Logo} alt='Logo Voll' />
@@ -26,7 +26,7 @@ export default function Login() {
         />
       </Box>
 
-      <Botao>Entrar</Botao>
+      <Botao onPress={() => navigation.navigate('Tabs')}>Entrar</Botao>
 
       <Link
         href='https://www.alura.com.br'
@@ -42,7 +42,7 @@ export default function Login() {
         mt={8}
       >
         <Text>Ainda não tem cadastro?</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Cadastro')}>
           <Text color="blue.500" fontWeight="bold">Faça seu cadastro</Text>
         </TouchableOpacity>
       </Box>
