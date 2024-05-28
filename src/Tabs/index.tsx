@@ -51,7 +51,7 @@ export default function Tabs(){
                     component={tab.component}
                     options={{ 
                         headerShown: false,
-                        tabBarLabel: 'Principal',
+                        tabBarLabel: tab.name,
                         tabBarIcon: ({ color, size }) => (
                             <Ionicons name={tab.icon} color={color} size={size} />
                         ),
